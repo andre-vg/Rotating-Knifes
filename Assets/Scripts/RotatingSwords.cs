@@ -13,4 +13,17 @@ public class RotatingSwords : MonoBehaviour
 	{
 		transform.RotateAround(playerGO.transform.position, Vector3.forward, rotateSpeed * Time.deltaTime);
 	}
+
+	//Just overlapped a collider 2D
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.name == "Player")
+		{
+			Debug.Log("Player hit by rotating sword");
+		}
+		if (collision.gameObject.name == "Enemy")
+		{
+			Debug.Log("Enemy hit by rotating sword");
+		}	
+	}
 }
