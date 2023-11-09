@@ -9,7 +9,9 @@ public class EnemyScript : MonoBehaviour
     public GameObject player;
 
     //Function to start follow player
-
+    public void Awake(){
+        player = GameObject.Find("Player");
+    }
     public void Update()
     {
         //Get player position

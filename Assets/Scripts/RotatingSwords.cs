@@ -23,7 +23,11 @@ public class RotatingSwords : MonoBehaviour
 		}
 		if (collision.gameObject.name == "Enemy")
 		{
-			Debug.Log("Enemy hit by rotating sword");
+			Destroy(collision.gameObject);
+		}
+		if (collision.gameObject.name == "Enemy(Clone)")
+		{
+			Destroy(collision.gameObject);
 		}	
 	}
 }
