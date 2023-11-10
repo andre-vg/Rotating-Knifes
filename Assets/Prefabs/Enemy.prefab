@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -610403906, guid: 038654bc519e81c40b81653228d6dd5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc2d6552a14f2c648963824fb5630beb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 1
-  player: {fileID: 0}
 --- !u!1 &8453999251092459652
 GameObject:
   m_ObjectHideFlags: 0

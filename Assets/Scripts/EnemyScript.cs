@@ -6,7 +6,7 @@ public class EnemyScript : MonoBehaviour
 {
     [Range(0f, 10f)]
     public float enemySpeed = 1f;
-    public GameObject player;
+    private GameObject player;
 
     //Function to start follow player
     public void Awake(){

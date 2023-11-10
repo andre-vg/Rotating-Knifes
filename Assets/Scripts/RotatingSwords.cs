@@ -19,7 +19,9 @@ public class RotatingSwords : MonoBehaviour
 	{
 		if (collision.gameObject.name == "Player")
 		{
-			Debug.Log("Player hit by rotating sword");
+			PlayerController player = GameObject.Find("Player").GetComponent<PlayerController>();
+			player.damagePlayer();
+			// StartCoroutine(player.ImortalityAfterHit());
 		}
 		if (collision.gameObject.name == "Enemy")
 		{
@@ -28,6 +30,11 @@ public class RotatingSwords : MonoBehaviour
 		if (collision.gameObject.name == "Enemy(Clone)")
 		{
 			Destroy(collision.gameObject);
-		}	
+		}
+	}
+
+	public void setRotateSpeed()
+	{
+		rotateSpeed += 10f;
 	}
 }
