@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
             clamp = Time.deltaTime * 1.2f;
             playerImage.color = Color.Lerp(playerImage.color, newColor, clamp);
             swordImage.color = Color.Lerp(swordImage.color, newColor, clamp);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             return;
         }
 
