@@ -16,6 +16,7 @@ public class GatoScript : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             player.healPlayer();
+            Destroy(gameObject);
         }
     }
 }

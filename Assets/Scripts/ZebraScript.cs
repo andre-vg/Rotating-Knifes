@@ -17,6 +17,7 @@ public class ZebraScript : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             sword.setRotateSpeed();
+            Destroy(gameObject);
         }
     }
 }
