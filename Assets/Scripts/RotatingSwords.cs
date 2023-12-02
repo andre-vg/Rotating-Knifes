@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class RotatingSwords : MonoBehaviour
 {
+	public Spawners enemySpawners;
 	public GameObject playerGO;
 
 	[Range(100f, 1000.0f)]
 	public float rotateSpeed = 100f;
+	
 
 	public void Update()
 	{
@@ -25,10 +27,12 @@ public class RotatingSwords : MonoBehaviour
 		}
 		if (collision.gameObject.name == "Enemy")
 		{
+			enemySpawners.IDied();
 			Destroy(collision.gameObject);
 		}
 		if (collision.gameObject.name == "Enemy(Clone)")
 		{
+			enemySpawners.IDied();
 			Destroy(collision.gameObject);
 		}
 	}
